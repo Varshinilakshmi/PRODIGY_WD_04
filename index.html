@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing : border-box;
+}
+
+.header
+{
+    width: 100%;
+    background-color: #aa7b7b;
+    display: flex;
+    height: 70px;
+   /* padding-left:10%;
+    padding-right: 10%;*/
+    padding: 0px 10%;
+   justify-content: space-between;
+}
+.logo
+{
+    width: 10%;
+    height: 70px;
+    /*background-color: yellow;*/
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+}
+.nav
+{ 
+    width: 30%;
+    height:70px;
+    /*background-color: blue;*/
+}
+.nav-links
+{
+    height: 70px;
+    width: 100%;
+    /*background-color: red;*/
+    list-style-type: none;
+    display: flex;
+    align-items: center ;
+    justify-content: space-between;
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+}
+
+/* banner css */
+.banner
+{
+    width: 100%;
+height: 700px;
+background-color:rgb(246, 239, 239) ;
+padding-left: 10%;
+padding-right: 10%;
+padding-top: 30px;
+display: flex;
+align-items: center;
+}
+
+.details
+{
+    width: 60%;
+    padding: 20px;
+    /*background-color:white;*/
+    font-family:"Montserrat", sans-serif; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 15px;
+}
+
+.t1
+{
+    font-size: 60px;
+}
+
+.t2
+{
+    
+    font-size: 70px;
+    font-weight: 700;
+    color: palevioletred;
+}
+
+.desc
+{  
+    font-size: 20px;
+}
+
+.cta
+{
+    padding: 15px 40px;
+    font-size: 20px;
+    margin-top: 35px;
+    background-color: palevioletred;
+    color: white;
+    border: 2px solid palevioletred;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+.cta:hover
+{
+    background-color: transparent;
+    color: palevioletred;
+}
+
+.person
+{
+
+    background-color: #7b7474;
+    border-radius: 30px;
+   /* align-self: flex-end;*/
+
+}
+
+.person-img
+{
+    height: 400px;
+}
+
+/* services css */
+
+.services
+{
+    width: 100%;
+    padding: 30px 10%;
+   background-color: rgb(180, 194, 196);
+}
+
+.section-title
+{
+    font-family:"Montserrat", sans-serif; 
+    font-size: 50px;
+    font-weight: 200;
+}
+.section-child
+{
+    width: 100%;
+    padding: 30px 0px;
+    /*background-color: white;*/
+    margin: 30px;
+    display: flex;
+    column-gap: 3%;
+}
+
+.service
+{
+    width:30%;
+    background-color: goldenrod;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    font-family:"Montserrat", sans-serif; 
+    row-gap: 15px;
+    box-shadow: 0 0 2px gray;
+    border-radius: 10px;
+}
+
+.icon
+{
+    padding: 50px;
+    font-size: 20px;
+    align-self: center;
+
+}
+.service-txt
+{
+    font-size: 15px;
+    font-weight: lighter;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.service-btn
+{
+    padding: 10px 25px;
+    background-color: palevioletred;
+    color: white;
+    border: none;
+    border-radius: 10px ;
+}
+
+/*achievements*/
+
+.achievements
+{
+    padding: 30px 10%;
+    background-color:rgb(242, 235, 235) ;
+    font-family:"Montserrat", sans-serif; 
+}
+
+.achievement
+{
+    width: 18%;
+    padding: 50px;
+    background-color: rgb(202, 172, 146);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.achievements-child
+{
+    column-gap: 2.5%;
+}
+
+.number
+{
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.tag
+{
+    font-size: 16px;
+}
+
+/* quote css */
+
+.quote
+{
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-image: url('https://images.pexels.com/photos/4238497/pexels-photo-4238497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')
+}
+
+.overlay
+{
+    width: 100%;
+    height: 100%;
+    padding: 30px 10%;
+    background-color: rgba(0, 0,0, .3);
+    display:flex;
+    align-items: center;
+}
+
+.quote-area
+{
+    width: 100%;
+    padding: 30px 0px;
+    /*background-color: white;*/
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+}
+
+.inp-email
+{
+    width: 70%;
+    height: 60px;
+    border:2px solid white;
+    font-size: 18px;
+    text-indent: 20px;
+    border-radius: 10px;
+    background-color: transparent;
+    outline: none;
+
+}
+
+ ::placeholder
+
+ {
+    color: white;
+ }
+
+ /* clients */
+
+ .Clients
+ {
+    width: 100%;
+    padding: 30px 10%;
+    background-color:white;
+ }
+
+ .client-section-child
+ {
+    /*background-color: white;*/
+    column-gap: 4%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30%;
+ }
+
+ .Client-img
+ {
+    width: 15%;
+    cursor: pointer;
+    
+ }
+
+ .Client-img:hover
+ {
+    filter: grayscale(0)
+
+ }
+
+ /* footer css */
+
+ .footer
+ {
+    width: 100%;
+    padding: 30px 10%;
+    background-color: rgb(84, 78, 78);
+    font-family:"Montserrat", sans-serif; 
+    color: white;
+ }
+
+
+ .footer-child
+ {
+    width:22%;
+    padding: 20px 20px;
+    /*background-color: gray;*/
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+ }
+
+ .footer-list
+ {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+   
+ }
+
+ .map
+ {
+    width: 46%;
+    padding: 0;
+ }
+    </style>
+<body>
+    <!-- header -->
+    <header class="header" >
+        <div class ="logo">
+            <p>portfolio</p>
+        </div>
+        <nav class="nav">
+        <ul class="nav-links">
+            <li>Home</li>
+            <li>Services</li>
+            <li>Quote</li>
+            <li>Clients</li>
+        </ul>
+        </nav>
+
+    </header>
+    <!-- banner -->
+     <section class = "banner">
+         <div class="details">
+            <p class="t1">
+                I am,
+            </p>
+            <p class="t2">
+                Varshini
+            </p>
+            <p class="Desc">
+                 Developer | Corporate Trainer 
+            </p>
+            <button class="cta">
+                Contact Me
+            </button>
+         </div>
+         <div class="person">
+            <img class="person-img" src="person1.png" alt=""
+         </div>
+     </section>
+
+     <!-- services -->
+
+     <section class="services">
+        <h1 class="section-title">
+            Services I Provide
+        </h1>
+
+        <div class="section-child">
+
+            
+            <div class="service">
+                <i class="<<i class="fa fa-free-code-camp" ></i></i>
+ 
+                <h2>Website Development</h2>
+ 
+                <p>Web Page . Hosting . Contact Form</p>
+ 
+                <p class="service-txt"> Starts from 150$
+          </p>
+                <button class="service-btn">View More</button>
+ 
+             </div>
+             
+             <div class="service">
+                <i class="<i class="fa fa-laptop icon"></i>
+ 
+                <h2>Digital Marketing</h2>
+ 
+                <p>Web Page . Hosting . Contact Form</p>
+ 
+                <p class="service-txt"> Starts from 100$
+          </p>
+                <button class="service-btn">View More</button>
+ 
+             </div>
+             <div class="service">
+                <i class="<i class="fa fa-laptop icon"></i>
+ 
+                <h2>App  Development</h2>
+ 
+                <p>Web Page . Hosting . Contact Form</p>
+ 
+                <p class="service-txt"> Starts from 200$
+                
+          </p>
+                <button class="service-btn">View More</button>
+ 
+             </div>
+        </div>
+
+     </section>
+
+     <!-- achievements -->
+
+        <section class="achievements">
+            <div class="section-child  achievements-child" >
+
+                <div class="achievement">
+                     
+                    <p class="number" > 200+</p>
+                    <p class="tag">Satisfied Clients</p>
+                </div>
+            
+            <div class="achievement">
+                     
+                <p class="number" > 378+</p>
+                <p class="tag">Projects Delivered</p>
+            </div>
+            <div class="achievement">
+                     
+                <p class="number" > 3 lakh+</p>
+                <p class="tag">Github Commits</p>
+            </div>
+            <div class="achievement">
+                     
+                <p class="number" >450+</p></p>
+                <p class="tag">Countries Covered</p>
+            </div>
+            <div class="achievement">
+                     
+                <p class="number" > 350k+</p>
+                <p class="tag">Subscribers</p>
+            </div>
+
+            </div>
+
+        </section>
+ <!-- quote section-->
+
+  <section class="quote">
+
+    <div class="overlay">
+        
+        <div class="quote-area">
+
+            <input type="text" class="inp-email" placeholder="Enter your Email">
+
+            <button class="cta">Get Quote</button>
+        </div>
+
+    </div>
+       
+  </section>
+
+ <!--clients -->
+
+ <section class="Clients">
+
+    <h1 class="section-child"> Our Clients</h1>
+
+    <div class="section-child Client-section-child"> 
+
+     <img class="Client-img"  src="https://th.bing.com/th/id/OIP.D6P-BO32wCApcPIIjt6p5wAAAA?w=177&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Clients">
+     <img class="Client-img"  src="https://logos-download.com/wp-content/uploads/2016/10/Deloitte_logo.png" alt="Clients">
+     <img class="Client-img"  src="https://th.bing.com/th/id/OIP.m1gQX604YGt9UuKoqCTKlAHaEK?w=311&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Clients">
+     <img class="Client-img"  src="https://th.bing.com/th/id/OIP.YD-nPuOPzmWcdrUalkCO3wHaEo?w=283&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Clients">
+     <img class="Client-img"  src="https://th.bing.com/th/id/OIP.hbr47SG8Nl1CUsQBVLhz_AHaHa?w=182&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Clients">
+     <img class="Client-img"  src="https://th.bing.com/th/id/OIP.OM3IZR7pTud4p2-vhNCbEgHaEK?w=271&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Clients">
+    </div>
+
+ </section>
+
+  <!-- footer -->
+
+  <footer class="footer">
+
+    <div class="section-child">
+
+        <div class="footer-child"> 
+
+            <h3>Quick links</h3>
+            <ul class="footer-list"> 
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Contact</li>
+                <li>Portfolio</li>
+                <li>prices</li>
+                <li>Clients</li>
+            </ul>
+
+        </div>
+
+        <div class="footer-child"> 
+
+            <h3>Contact</h3>
+            <ul class="footer-list"> 
+                <li>
+                    KPHB, Phase1 Near KPHB Metro 
+                </li>
+                <li>
+                    +91 5987467624
+                </li>
+                <li>
+                    +91 4598746383
+                </li>
+                <li>varshinilakshmi99@gmail.com</li>
+            </ul>
+
+        </div>
+
+        <div class="footer-child map">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60901.259234738296!2d78.33977455000003!3d17.443974649999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93a276decedf%3A0x2c12e79e6f9344e2!2sGachibowli%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1716574811956!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+
+    </div>
+  </footer>
+
+
+</body>
+</html>
